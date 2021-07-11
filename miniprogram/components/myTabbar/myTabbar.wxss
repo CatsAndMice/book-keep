@@ -1,0 +1,8 @@
+/* components/myTabBar/myTabBar.wxss */
+.navs{
+  display: flex;
+}
+.nav{
+  flex-wrap: 1;
+  display: inline-block;
+}

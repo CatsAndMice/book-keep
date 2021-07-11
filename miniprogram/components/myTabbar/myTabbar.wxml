@@ -1,0 +1,5 @@
+<van-tabbar active="{{ active }}" bind:change="onChange" class="navs">
+  <van-tabbar-item icon="wap-home-o" />
+  <van-tabbar-item icon="records" />
+  <van-tabbar-item icon="setting-o" />
+</van-tabbar>
