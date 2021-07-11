@@ -1,1 +1,18 @@
+<van-row class="header-view">
+  <van-col span="24">
+    <view class="type-view">
+      <text class="type">全部类型</text>
+      <van-icon name="qr" class="icon" />
+    </view>
+  </van-col>
+  <van-row class="pay-info">
+    <van-col span="7">2021年7月
+      <van-icon name="arrow-down" />
+    </van-col>
+    <van-col span="17">
+      <text>总支出</text>
+      <text>总收入</text>
+    </van-col>
+  </van-row>
+</van-row>
 <my-tabbar hidden="{{isBarNoShow}}" />

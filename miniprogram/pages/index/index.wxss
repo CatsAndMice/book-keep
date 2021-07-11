@@ -1,1 +1,45 @@
 /* miniprogram/pages/index/index.wxss */
+.header-view {
+  background-color: #2DAB6B;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.type-view {
+  margin-bottom: 20rpx;
+  display: inline-flex;
+  align-items: center;
+  padding: 8rpx 16rpx;
+  border-radius: 6rpx;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.type {
+
+  display: inline-block;
+  padding-right: 20rpx;
+  position: relative;
+}
+
+.type::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 70%;
+  width: 2rpx;
+  background-color: #ccc;
+  transform: translateY(-50%);
+}
+
+.icon {
+  padding-left: 20rpx;
+}
+
+.pay-info {
+  display: block;
+  box-sizing: content-box;
+  padding-bottom: 20rpx;
+}
