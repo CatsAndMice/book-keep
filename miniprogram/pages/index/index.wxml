@@ -10,7 +10,7 @@
       <van-icon name="arrow-down" />
     </van-col>
     <van-col span="17">
-      <text>总支出</text>
+      <text>总</text>
       <text>总收入 </text>
     </van-col>
   </van-row>
