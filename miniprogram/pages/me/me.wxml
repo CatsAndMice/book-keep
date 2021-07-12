@@ -1,1 +1,6 @@
-<my-tabbar active="2"/>
+<van-cell-group>
+  <van-cell title="记账提醒" center>
+    <van-switch size="20px" checked="{{checked}}" bind:change="onChange"/>
+  </van-cell>
+</van-cell-group>
+<my-tabbar active="2" />
