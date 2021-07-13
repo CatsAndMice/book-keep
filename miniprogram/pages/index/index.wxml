@@ -1,3 +1,4 @@
+
 <van-row class="header-view">
   <van-col span="24">
     <view class="type-view">
@@ -6,7 +7,8 @@
     </view>
   </van-col>
   <van-row class="pay-info">
-    <van-col span="7">2021年7月
+    <van-col span="7" bindtap="onClick">
+      {{curYear}}年{{curMonth}}月
       <van-icon name="arrow-down" />
     </van-col>
     <van-col span="17">
@@ -15,4 +17,14 @@
     </van-col>
   </van-row>
 </van-row>
+<van-row>
+  <van-col span="24">
+    <record-money></record-money>
+  </van-col>
+</van-row>
+<van-popup bind:after-leave="leave" show="{{ show }}" position="bottom" custom-style="height: 40%;" bind:close="onClose"
+  round>
+  <my-month bind:selectEvent="onSelectEvent"></my-month>
+</van-popup>
+
 <my-tabbar hidden="{{isBarNoShow}}" />

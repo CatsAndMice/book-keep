@@ -1,0 +1,42 @@
+/* components/myMonth/myMonth.wxss */
+
+
+.months {
+  width: 100%;
+  height: 100%;
+}
+
+.select-msg {
+  font-size: 28rpx;
+  font-weight: 600;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.curYear {
+  margin-top: 40rpx;
+  margin-bottom: 24rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: rgb(146, 141, 141);
+}
+
+.month-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+}
+
+.month-item {
+  width: 140rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #eee;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 80rpx;
+}
