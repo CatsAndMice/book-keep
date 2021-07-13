@@ -17,7 +17,6 @@
 }
 
 .type {
-
   display: inline-block;
   padding-right: 20rpx;
   position: relative;
