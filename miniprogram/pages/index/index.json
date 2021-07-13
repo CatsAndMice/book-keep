@@ -1,4 +1,6 @@
 {
   "usingComponents": {
+    "my-month": "./components/myMonth/myMonth",
+    "record-money": "./components/recordMoney/recordMoney"
   }
 }

@@ -1,0 +1,7 @@
+<!--components/recordMoney/recordMoney.wxml-->
+<van-button round class="btn" bindtap="sendMessage">
+  <view class="contian">
+    <van-icon name="records" class="icon-component" size="20px" />
+    <text class="msg">记一笔</text>
+  </view>
+</van-button>

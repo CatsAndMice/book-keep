@@ -1,0 +1,10 @@
+<!--components/myMonth/myMonth.wxml-->
+<view class="months">
+  <view class="select-msg">请选择月份</view>
+  <view class="curYear">{{curYear}}年</view>
+  <view class="month-items">
+    <view wx:for="{{endMonth}}" data-index="{{item}}" wx:key="item" class="month-item" bindtap="onClick">
+      {{ item }}月
+    </view>
+  </view>
+</view>
