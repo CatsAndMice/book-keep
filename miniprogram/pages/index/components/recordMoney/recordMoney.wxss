@@ -2,13 +2,12 @@
 .btn {
   position: fixed;
   right: 20rpx;
-  bottom: 150rpx;
+  bottom: 180rpx;
 }
 
 .btn .van-button {
   box-shadow: 0px 0px 8rpx rgb(156, 151, 151);
 }
-
 .contian {
   display: inline-flex;
   align-items: center;
@@ -23,11 +22,9 @@
 .page-type {
   width: 100%;
   height: 100%;
-  padding: 0 10px;
 }
 
 .selectMoney {
-  height: 100%;
   box-sizing: border-box;
   padding-top: 45px;
   display: flex;
@@ -37,12 +34,11 @@
 
 .btn-view .van-button {
   border-color: transparent;
-  margin-right: 18rpx;
+  margin-left: 10px;
 }
 
 .date-btn {
-  margin-right: 25px;
-
+  margin-right: 10px;
 }
 
 .date-btn .van-button {
@@ -53,4 +49,14 @@
 
 .btn-view.active .van-button {
   background-color: rgb(196, 189, 149) !important;
+}
+.money .van-cell{
+  margin-top: 20rpx;
+}
+
+.money .van-cell__title {
+  flex: auto;
+  min-width: 0 !important;
+  margin-right: 20rpx;
+  max-width: 40rpx !important;
 }

@@ -8,7 +8,11 @@
     <text class="msg">记一笔</text>
   </view>
 </van-button>
-<van-popup show="{{ show }}" closeable="{{isCloseIconShow}}" position="bottom" custom-style="height:{{height}}"
+<van-popup show="{{ show }}" closeable="{{isCloseIconShow}}" round position="bottom" custom-style="height:{{height}}"
   bind:close="onClose">
   <template is="{{templateName}}" data="{{...selectMoney}}"></template>
+  <van-calendar color="#2DAB6B" show="{{ calendarShow }}" default-date="{{curDate}}" show-mark="{{false}}"
+    min-date="{{ minDate }}" default-date="{{defaultDate}}" max-date="{{ maxDate }}" bind:close="onCalendarClose"
+    bind:confirm="onConfirm">
+  </van-calendar>
 </van-popup>

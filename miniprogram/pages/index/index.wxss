@@ -42,3 +42,33 @@
   box-sizing: content-box;
   padding-bottom: 20rpx;
 }
+
+.data-view .van-col {
+  padding-bottom: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.no-data {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 520rpx;
+  height: 420rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: rgb(218, 214, 214);
+}
+
+.data-image {
+  width: 100%;
+  height: 100%;
+}
+
+.no-data-msg {
+  left: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
