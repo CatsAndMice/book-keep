@@ -92,6 +92,7 @@ Component({
         success({
           subscriptionsSetting
         }) {
+          console.log(subscriptionsSetting.mainSwitch);
           self.setMessage(subscriptionsSetting.mainSwitch);
         },
         fail() {
