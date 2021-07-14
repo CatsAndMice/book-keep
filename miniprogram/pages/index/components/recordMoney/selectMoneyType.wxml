@@ -1,0 +1,13 @@
+<template name="selectMoneyType">
+  <view class="page-type">
+    <view class="selectMoney">
+      <view>
+        <van-button class="btn-view {{index == active ? 'active':''}}" color="#ccc" data-index="{{index}}"
+          bind:click="tapEvent" size="small" wx:for="{{btns}}" wx:key="item">{{item}}
+        </van-button>
+      </view>
+      <van-button class="btn-view date-btn" size="small" icon="arrow-down" bind:click="onClickTime">7月24日</van-button>
+    </view>
+
+  </view>
+</template>

@@ -13,7 +13,7 @@ exports.main = async () => {
   console.log(wxContext.OPENID);
   const time = new Date();
   return await cloud.openapi.subscribeMessage.send({
-    touser: 'o7Ckh5UQKxYrOVlnCIb6_X6vK-3A',
+    touser: wxContext.OPENID,
     templateId: 'uw69JepR3iKqD5qIsR12pZWAEDlMnojXluYvnpRrykU',
     data: {
       "time1": {

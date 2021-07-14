@@ -11,15 +11,46 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    show: false,
+    height: '80%',
+    isCloseIconShow: true,
+    templateName: 'selectMoneyType',
+    selectMoney: {
+      btns: ['支出', '收入'],
+      active: 0
+    }
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    startRecords() {
+    onClickTime() {
 
+    },
+
+
+    tapEvent({
+      target
+    }) {
+      let {
+        dataset
+      } = target;
+      this.setData({
+        'selectMoney.active': dataset.index
+      })
+    },
+
+    onClose() {
+      this.setData({
+        show: false
+      })
+    },
+
+    startRecords() {
+      this.setData({
+        show: true
+      })
     },
 
     openSeting() {
@@ -34,19 +65,6 @@ Component({
       })
     },
 
-    setModel() {
-      let self = this;
-      wx.showModal({
-        content: '是否修改接收消息',
-        success(res) {
-          if (res.confirm) {
-            self.openSeting();
-          } else if (res.cancel) {
-            console.log('用户点击取消')
-          }
-        }
-      })
-    },
 
     sendMessageCallFuction() {
       let self = this;
@@ -57,16 +75,11 @@ Component({
         },
         fail(err) {
           console.log(err);
-          // errCode == '-404011' ? self.setModel() : null;
         }
       })
     },
 
-    setMessage(mainSwitch = false) {
-      if (mainSwitch) {
-        this.sendMessageCallFuction();
-        return
-      };
+    setMessage(itemSettings) {
       let self = this;
       wx.requestSubscribeMessage({
         tmplIds: ["uw69JepR3iKqD5qIsR12pZWAEDlMnojXluYvnpRrykU"],
@@ -86,18 +99,18 @@ Component({
     },
 
     sendMessage() {
-      let self = this;
-      wx.getSetting({
-        withSubscriptions: true,
-        success({
-          subscriptionsSetting
-        }) {
-          self.setMessage(subscriptionsSetting.mainSwitch);
-        },
-        fail() {
-          self.setMessage();
-        }
-      })
+      // let self = this;
+      // wx.getSetting({
+      //   withSubscriptions: true,
+      //   success({
+      //     subscriptionsSetting
+      //   }) {
+      //     // self.setMessage(subscriptionsSetting.itemSettings);
+      //   },
+      //   fail() {
+      //     // self.setMessage();
+      //   }
+      // })
     }
   }
 })

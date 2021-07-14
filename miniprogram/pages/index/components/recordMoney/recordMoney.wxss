@@ -19,3 +19,38 @@
   font-size: 28rpx;
   color: #2DAB6B;
 }
+
+.page-type {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.selectMoney {
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.btn-view .van-button {
+  border-color: transparent;
+  margin-right: 18rpx;
+}
+
+.date-btn {
+  margin-right: 25px;
+
+}
+
+.date-btn .van-button {
+  background-color: rgb(218, 214, 214);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btn-view.active .van-button {
+  background-color: rgb(196, 189, 149) !important;
+}
