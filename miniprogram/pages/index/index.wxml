@@ -1,4 +1,3 @@
-
 <van-row class="header-view">
   <van-col span="24">
     <view class="type-view">
@@ -17,9 +16,13 @@
     </van-col>
   </van-row>
 </van-row>
-<van-row>
-  <van-col span="24">
+<van-row class="view">
+  <van-col span="24" class="data-view">
     <record-money></record-money>
+    <view class="no-data">
+      <image class="data-image" mode="aspectFit" src="../../images/no-data.png"></image>
+      <view class="no-data-msg">暂无账目</view>
+    </view>
   </van-col>
 </van-row>
 <van-popup bind:after-leave="leave" show="{{ show }}" position="bottom" custom-style="height: 40%;" bind:close="onClose"

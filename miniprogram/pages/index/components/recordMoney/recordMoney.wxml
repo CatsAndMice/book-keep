@@ -1,7 +1,18 @@
 <!--components/recordMoney/recordMoney.wxml-->
-<van-button round class="btn" bindtap="sendMessage">
+<import src='./selectMoneyType.wxml' />
+<import src='./writeMessage.wxml' />
+
+<van-button round class="btn" bindtap="startRecords">
   <view class="contian">
     <van-icon name="records" class="icon-component" size="20px" />
     <text class="msg">记一笔</text>
   </view>
 </van-button>
+<van-popup show="{{ show }}" closeable="{{isCloseIconShow}}" round position="bottom" custom-style="height:{{height}}"
+  bind:close="onClose">
+  <template is="{{templateName}}" data="{{...selectMoney}}"></template>
+  <van-calendar color="#2DAB6B" show="{{ calendarShow }}" default-date="{{curDate}}" show-mark="{{false}}"
+    min-date="{{ minDate }}" default-date="{{defaultDate}}" max-date="{{ maxDate }}" bind:close="onCalendarClose"
+    bind:confirm="onConfirm">
+  </van-calendar>
+</van-popup>

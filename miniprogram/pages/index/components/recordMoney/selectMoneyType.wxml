@@ -1,0 +1,15 @@
+<template name="selectMoneyType">
+  <view class="page-type">
+    <view class="selectMoney">
+      <view>
+        <van-button class="btn-view {{index == active ? 'active':''}}" color="#ccc" data-index="{{index}}"
+          bind:click="tapEvent" size="small" wx:for="{{btns}}" wx:key="item">{{item}}
+        </van-button>
+      </view>
+      <van-button class="btn-view date-btn" size="small" icon="arrow-down" bind:click="onClickTime">{{time}}
+      </van-button>
+    </view>
+    <van-field class="money" clearable bind:change="onChange" type="digit" model:value="{{ money }}" label="￥">
+    </van-field>
+  </view>
+</template>
