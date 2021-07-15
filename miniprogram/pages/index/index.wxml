@@ -29,5 +29,3 @@
   round>
   <my-month bind:selectEvent="onSelectEvent"></my-month>
 </van-popup>
-
-<my-tabbar hidden="{{isBarNoShow}}" />
