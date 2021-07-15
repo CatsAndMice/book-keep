@@ -8,10 +8,10 @@ function getThenNineNum(num) {
 }
 
 // 云函数入口函数
-exports.main = async () => {
-  const wxContext = cloud.getWXContext();
-  console.log(wxContext.OPENID);
+exports.main = async (event, context) => {
+  const wxContext = await cloud.getWXContext();
   const time = new Date();
+  console.log(wxContext);
   return await cloud.openapi.subscribeMessage.send({
     touser: wxContext.OPENID,
     templateId: 'uw69JepR3iKqD5qIsR12pZWAEDlMnojXluYvnpRrykU',
