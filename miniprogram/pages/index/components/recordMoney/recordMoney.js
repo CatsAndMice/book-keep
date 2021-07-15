@@ -21,15 +21,17 @@ Component({
     maxDate: date.getTime(),
     minDate: date.getTime() - rangeTime,
     calendarShow: false,
-    money:'',
+    money: '',
     defaultDate: date.getTime(),
     selectMoney: {
       btns: ['支出', '收入'],
       active: 0,
-      time: ''
+      time: '',
+      icons: []
     }
   },
   attached() {
+    this.getIcons();
     this.setData({
       'selectMoney.time': `${ThenNine.getThenNineNum( date.getMonth()+1)}月${ThenNine.getThenNineNum( date.getDate())}日`
     })
@@ -44,7 +46,25 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onChange({detail}){
+    getIcons: async function () {
+      let self = this;
+      wx.cloud.callFunction({
+        name: "getIcons",
+        success({
+          result
+        }) {
+          result.errMsg === "collection.get:ok" ? self.setData({
+            'selectMoney.icons': result.data[0].icons
+          }) : null;
+
+          console.log(result.data[0].icons);
+        }
+      })
+    },
+
+    onChange({
+      detail
+    }) {
       console.log(this.data);
     },
 

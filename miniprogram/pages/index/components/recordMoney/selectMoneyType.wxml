@@ -11,5 +11,11 @@
     </view>
     <van-field class="money" clearable bind:change="onChange" type="digit" model:value="{{ money }}" label="￥">
     </van-field>
+    <view class="icons-view">
+      <view wx:for="{{icons}}" wx:key="index" class="icon-item">
+        <view class="iconfont {{item.icon}} icons"></view>
+        <text class="icon-name">{{item.name}}</text>
+      </view>
+    </view>
   </view>
 </template>

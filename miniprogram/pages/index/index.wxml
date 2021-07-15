@@ -1,5 +1,4 @@
 <van-row class="header-view">
-  <view class="iconfont icon-78lvxing"></view>
   <van-col span="24">
     <view class="type-view">
       <text class="type">全部类型</text>
