@@ -10,7 +10,7 @@
 </van-button>
 <van-popup show="{{ show }}" closeable="{{isCloseIconShow}}" round position="bottom" custom-style="height:{{height}}"
   bind:close="onClose">
-  <template is="{{templateName}}" data="{{...selectMoney}}"></template>
+  <template is="{{templateName}}" data="{{...selectMoney}}" ></template>
   <van-calendar color="#2DAB6B" show="{{ calendarShow }}" default-date="{{curDate}}" show-mark="{{false}}"
     min-date="{{ minDate }}" default-date="{{defaultDate}}" max-date="{{ maxDate }}" bind:close="onCalendarClose"
     bind:confirm="onConfirm">

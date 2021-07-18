@@ -2,8 +2,8 @@
   <view class="page-type">
     <view class="selectMoney">
       <view>
-        <van-button class="btn-view {{index == active ? 'active':''}}" color="#ccc" data-index="{{index}}"
-          bind:click="tapEvent" size="small" wx:for="{{btns}}" wx:key="item">{{item}}
+        <van-button class="btn-view {{index == active ? 'active':''}}" color="#ccc" data-type="{{item.type}}"
+          data-index="{{index}}" bind:click="tapEvent" size="small" wx:for="{{btns}}" wx:key="text">{{item.text}}
         </van-button>
       </view>
       <van-button class="btn-view date-btn" size="small" icon="arrow-down" bind:click="onClickTime">{{time}}
@@ -12,10 +12,12 @@
     <van-field class="money" clearable bind:change="onChange" type="digit" model:value="{{ money }}" label="￥">
     </van-field>
     <view class="icons-view">
-      <view wx:for="{{icons}}" wx:key="index" class="icon-item">
+      <view wx:for="{{icons}}" wx:key="index" class="icon-item {{index === activeIcon? 'is-active':''}}"
+        data-index="{{index}}" data-icon="{{item.icon}}" bindtap="onClickIcon">
         <view class="iconfont {{item.icon}} icons"></view>
         <text class="icon-name">{{item.name}}</text>
       </view>
     </view>
+    <van-button type="primary" bindtap="onSubmit" class="submitBtn">提交</van-button>
   </view>
 </template>
