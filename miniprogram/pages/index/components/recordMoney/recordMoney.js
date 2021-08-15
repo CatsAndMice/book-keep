@@ -1,5 +1,5 @@
 // components/recordMoney/recordMoney.js
-const ThenNine = require('../../../../tool/getThenNineNum');
+const ThenNine = require('../../../../tool/getThenNineNum'); 
 const date = new Date(),
   rangeTime = 7 * 1000 * 60 * 60 * 24;
 Component({
