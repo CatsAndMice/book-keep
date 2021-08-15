@@ -1,9 +1,6 @@
 'use strict';
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+Object.defineProperty(exports, '__esModule', { value: true });
 exports.adaptor = void 0;
-
 function adaptor(ctx) {
   // @ts-ignore
   return Object.assign(ctx, {

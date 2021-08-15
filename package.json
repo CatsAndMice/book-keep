@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lihai-boop/book-keep#readme",
   "dependencies": {
+    "@lihai-js/tool": "^1.3.1",
     "@vant/weapp": "^1.7.1"
   }
 }
